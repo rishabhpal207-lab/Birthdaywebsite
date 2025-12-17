@@ -1,145 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Mom ❤️</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Segoe UI', sans-serif;
-        }
-        body{
-            min-height:100vh;
-            background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            overflow:hidden;
-        }
-        .card{
-            background:rgba(255,255,255,0.95);
-            width:90%;
-            max-width:500px;
-            border-radius:25px;
-            padding:30px 25px 40px;
-            text-align:center;
-            box-shadow:0 20px 40px rgba(0,0,0,0.2);
-            position:relative;
-            animation:float 4s ease-in-out infinite;
-        }
-        @keyframes float{
-            0%,100%{transform:translateY(0);}
-            50%{transform:translateY(-10px);}
-        }
-        h1{
-            color:#e91e63;
-            font-size:2.2rem;
-            margin-bottom:10px;
-        }
-        h2{
-            color:#ff4081;
-            font-weight:500;
-            margin-bottom:20px;
-        }
-        .heart{
-            font-size:3rem;
-            animation:pulse 1.2s infinite;
-        }
-        @keyframes pulse{
-            0%{transform:scale(1);}
-            50%{transform:scale(1.2);}
-            100%{transform:scale(1);}
-        }
-        p{
-            color:#555;
-            font-size:1.05rem;
-            line-height:1.6;
-            margin:15px 0 25px;
-        }
-        button{
-            padding:12px 25px;
-            border:none;
-            border-radius:30px;
-            background:linear-gradient(135deg,#ff4081,#e91e63);
-            color:white;
-            font-size:1rem;
-            cursor:pointer;
-            transition:transform 0.2s, box-shadow 0.2s;
-            box-shadow:0 8px 20px rgba(233,30,99,0.4);
-        }
-        button:hover{
-            transform:scale(1.05);
-            box-shadow:0 12px 25px rgba(233,30,99,0.5);
-        }
-        .message{
-            display:none;
-            margin-top:20px;
-            color:#333;
-            font-size:1.05rem;
-        }
-        /* floating balloons */
-        .balloon{
-            position:absolute;
-            bottom:-120px;
-            width:60px;
-            height:80px;
-            border-radius:50% 50% 50% 50%;
-            animation:rise 8s linear infinite;
-            opacity:0.8;
-        }
-        .balloon::after{
-            content:'';
-            position:absolute;
-            bottom:-25px;
-            left:50%;
-            width:2px;
-            height:25px;
-            background:#aaa;
-        }
-        @keyframes rise{
-            0%{transform:translateY(0);}
-            100%{transform:translateY(-120vh);}
-        }
-        .b1{left:10%;background:#ff8a80;animation-delay:0s;}
-        .b2{left:30%;background:#ffd180;animation-delay:2s;}
-        .b3{left:50%;background:#80d8ff;animation-delay:4s;}
-        .b4{left:70%;background:#ccff90;animation-delay:1s;}
-        .b5{left:85%;background:#ea80fc;animation-delay:3s;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mom ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-        <div class="heart">❤️</div>
-        <h1>Happy Birthday Mom!</h1>
-        <h2>You are my world 🌸</h2>
-        <p>
-            Thank you for your endless love, care, and sacrifices.
-            Every smile of mine exists because of you.
-        </p>
-        <button onclick="showMessage()">Click for a Surprise 🎁</button>
-        <div class="message" id="msg">
-            💖 Dear Mom, may your day be filled with happiness, health,
-            and all the love you give to everyone around you.
-            I love you forever 💖
-        </div>
-    </div>
 
-    <!-- Balloons -->
-    <div class="balloon b1"></div>
-    <div class="balloon b2"></div>
-    <div class="balloon b3"></div>
-    <div class="balloon b4"></div>
-    <div class="balloon b5"></div>
+<!-- Floating Balloons -->
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
 
-    <script>
-        function showMessage(){
-            document.getElementById('msg').style.display='block';
-        }
-    </script>
+
+<div class="card">
+<div class="heart">❤️</div>
+<h1>Happy Birthday Mom</h1>
+<h2>The most special person in my life 🌸</h2>
+
+
+<p>
+Your love is my strength, your smile is my happiness,
+and your blessings guide me every day.
+</p>
+
+
+<button id="surpriseBtn">Click for a Surprise 🎁</button>
+
+
+<div class="message" id="message">
+💖 Dear Mom, may your life always be filled with joy,
+good health, peace, and everything beautiful.
+Thank you for everything. I love you forever 💖
+</div>
+</div>
+
+
+<script>
+document.getElementById('surpriseBtn').addEventListener('click', () => {
+document.getElementById('message').classList.toggle('show');
+});
+</script>
+
 
 </body>
 </html>
