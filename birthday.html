@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Mom ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- VERY IMPORTANT: CSS LINK -->
+    <link rel="stylesheet" href="birthdaystyle.css">
+</head>
+<body>
+
+    <!-- Balloons -->
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+    <div class="balloon b5"></div>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+
+        <h1>Happy Birthday Mom</h1>
+        <h2>You are my world 🌸</h2>
+
+        <p>
+            Your love is my strength and your smile is my happiness.
+            Thank you for everything you do.
+        </p>
+
+        <button id="btn">Click for a Surprise 🎁</button>
+
+        <div class="message" id="msg">
+            💖 Dear Mom, may your life be filled with joy, health,
+            peace and endless happiness.  
+            I love you forever 💖
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            document.getElementById("msg").classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>
